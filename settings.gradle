@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        // The moddev-gradle implementation jar is pre-seeded into ~/.m2 via curl --http1.1,
+        // so mavenLocal() must come first.
+        mavenLocal()
+        gradlePluginPortal()
+        maven { url = "https://maven.minecraftforge.net/" }
+        mavenCentral()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id.startsWith('net.neoforged.moddev')) {
+                useModule("net.neoforged:moddev-gradle:${requested.version}")
+            }
+        }
+    }
+}
+
+rootProject.name = 'maid_roster'
