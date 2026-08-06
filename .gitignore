@@ -1,0 +1,30 @@
+# ===== Build output =====
+build/
+.gradle/
+run/
+repo/
+out/
+
+# ===== Local workspace / private (may contain local paths & scripts) =====
+.workbuddy/
+
+# ===== Logs (may contain local absolute paths) =====
+*.log
+build_run.log
+
+# ===== OS junk =====
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# ===== IDE =====
+*.iml
+.idea/
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# ===== Local libs (never bundle binaries into VCS) =====
+libs/
